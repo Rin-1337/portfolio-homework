@@ -7,10 +7,8 @@ body {
 hr {
     width: 30%;
     border-radius: 50px;
-    border: 2px solid;
-    ;
-    top: 100px;
-    color: rgba(0, 0, 0, 0.767);
+    border: 2px solid rgba(0, 0, 0, 0.767);
+    margin: 0;
 }
 
 .main {
@@ -21,6 +19,10 @@ hr {
 .container {
     padding: 5% 15%;
     padding-bottom: 10%;
+}
+
+a {
+    text-decoration: none;
 }
 
 .nav2 {
@@ -66,6 +68,18 @@ hr {
 }
 
 .nav5:hover {
+    cursor: pointer;
+    color: rgb(243, 243, 243);
+
+}
+
+.nav6 {
+    margin-top: -43px;
+    margin-left: 97%;
+    color: rgba(243, 243, 243, 0.774);
+}
+
+.nav6:hover {
     cursor: pointer;
     color: rgb(243, 243, 243);
 
@@ -286,6 +300,13 @@ hr {
     max-height: 150px;
 }
 
+/* Ensure waves sit behind the section content */
+.waves,
+.waves1 {
+    z-index: 0;
+    display: block;
+}
+
 .parallax>use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
@@ -339,9 +360,17 @@ hr {
 /* hide by default */
 .ohter-skill {
     opacity: 0;
-    transform: translateY(40px); /* farther down for clearer motion */
+    transform: translateY(40px);
+    /* farther down for clearer motion */
     transition: opacity 4000ms cubic-bezier(.2, .9, .2, 1), transform 3000ms cubic-bezier(.2, .9, .2, 1);
     will-change: opacity, transform;
+}
+
+/* make sections positioned so z-index works and prevent waves from overlapping content */
+.ohter-skill,
+.main,
+.Experiences {
+    position: relative;
 }
 
 .waves1 {
@@ -401,4 +430,21 @@ hr {
 .navbar a.text__glitch,
 .navbar h5.text__glitch {
     text-shadow: 1px 0 0 var(--glitch-cyan), -1px 0 0 var(--glitch-lilac), 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container2 {
+    padding: 5% 15%;
+    padding-bottom: 10%;
+    display: grid;
+}
+
+.Experiences-title {
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.Experiences {
+    color: white;
+    background-color: #1f1f1f;
+    z-index: 2;
 }

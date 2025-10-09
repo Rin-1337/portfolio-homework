@@ -1,17 +1,17 @@
-function skill() {
-  $('body,html').animate({ scrollTop: 910 }, 800);
-}
-
 function port() {
-  $('body,html').animate({ scrollTop: 2000 }, 800);
+  const target = $('#ex');
+  if (target.length) {
+    const top = target.offset().top;
+    $('html, body').animate({ scrollTop: 2000 }, 800);
+  }
 }
 
 function other() {
-  $('body,html').animate({ scrollTop: 3700 }, 800);
-}
-
-function job() {
-  $('body,html').animate({ scrollTop: 4500 }, 800);
+  const target = $('#skill');
+  if (target.length) {
+    const top = target.offset().top;
+    $('html, body').animate({ scrollTop: 1000 }, 800);
+  }
 }
 
 const text = baffle(".text__glitch");
