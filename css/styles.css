@@ -482,7 +482,7 @@ a {
     flex: 1 1 360px;
     display: flex;
     justify-content: center;
-    align-items: stretch; /* make children stretch to same height */
+    align-items: stretch;
 }
 
 .experience-grid img {
@@ -492,7 +492,6 @@ a {
     box-shadow: 0 6px 20px rgba(0,0,0,0.45);
 }
 
-/* Make image and video fill their column and crop to match heights */
 .exp-left img,
 .exp-right .experience-video {
     width: 100%;
@@ -505,11 +504,10 @@ a {
     .experience-grid .exp-left,
     .experience-grid .exp-right {
         max-width: 48%;
-        height: 520px; /* set a visual column height so both sides match */
+        height: 520px; 
     }
 }
 
-/* ensure video uses object-fit on all viewports */
 .experience-video {
     object-fit: cover;
 >>>>>>> 141bd46 (Add Schedule and Video Presentation)
